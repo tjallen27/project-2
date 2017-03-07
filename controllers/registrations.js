@@ -18,7 +18,7 @@ function createRoute(req, res, next) {
 
     req.body.address.lat = response.results[0].geometry.location.lat;
     req.body.address.lng = response.results[0].geometry.location.lng;
-
+    console.log(response);
     User
       .create(req.body)
       .then(() => res.redirect('/login'))

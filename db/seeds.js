@@ -19,8 +19,8 @@ User
       city: 'London',
       postcode: 'E1 3ED',
       country: 'UK',
-      lat: '51.5168684',
-      lng: '-0.051608699999974306'
+      lat: '51.520066',
+      lng: '-0.055103'
     },
     email: '1@1.com',
     password: 'password',
