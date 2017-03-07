@@ -18,7 +18,9 @@ User
       street: 'WhiteChapel High St',
       city: 'London',
       postcode: 'E1 3ED',
-      country: 'UK'
+      country: 'UK',
+      lat: '51.5168684',
+      lng: '-0.051608699999974306'
     },
     email: '1@1.com',
     password: 'password',
@@ -31,7 +33,9 @@ User
       street: 'WhiteChapel High St',
       city: 'London',
       postcode: 'E1 1GD',
-      country: 'UK'
+      country: 'UK',
+      lat: '51.4972758',
+      lng: '-0.20491730000003372'
     },
     email: '2@2.com',
     password: 'password',
@@ -44,7 +48,9 @@ User
       street: 'WhiteChapel High St',
       city: 'London',
       postcode: 'E1 1XD',
-      country: 'UK'
+      country: 'UK',
+      lat: '51.51658620000001',
+      lng: '-0.06498179999994136'
     },
     email: '3@3.com',
     password: 'password',

@@ -2,15 +2,17 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  pubName: {type: String},
+  pubName: {type: String, required: true},
   address: {
-    streetNumber: { type: String },
-    street: { type: String },
-    city: { type: String },
-    postcode: { type: String },
-    country: { type: String }
+    streetNumber: { type: String, required: true },
+    street: { type: String, required: true },
+    city: { type: String, required: true },
+    postcode: { type: String, required: true },
+    country: { type: String },
+    lat: { type: Number },
+    lng: { type: Number }
   },
-  email: {type: String},
+  email: {type: String, required: true},
   password: {type: String, required: true}
 });
 

@@ -19,7 +19,7 @@ function newRoute(req, res){
 function showRoute(req, res) {
   Job
     .findById(req.params.id)
-    .populate('createdBy')
+    .populate('createdBy jobs.createdBy')
     .exec()
     .then((job) => {
       if(!job) return res.status(404).send('Not found');

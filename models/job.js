@@ -8,7 +8,8 @@ const jobSchema = new mongoose.Schema({
 });
 
 jobSchema.methods.ownedBy = function ownedBy(user){
-  return this.createdBy.id === user.id;
+  if(typeof this.createdBy.id === 'string') return this.createdBy.id === user.id;
+  return user.id === this.createdBy.toString();
 };
 
 module.exports = mongoose.model('Job', jobSchema);

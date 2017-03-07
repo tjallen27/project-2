@@ -4,6 +4,7 @@ const router  = express.Router();
 const sessionsController = require('../controllers/sessions');
 const registrationsController = require('../controllers/registrations');
 const jobs = require('../controllers/jobs');
+const users = require('../controllers/users');
 
 
 function secureRoute(req, res, next) {
@@ -47,5 +48,10 @@ router.route('/login')
 router.route('/logout')
   .get(sessionsController.delete);
 
+router.route('/users')
+  .get(users.index);
+
+router.route('/users/:id')
+  .get(users.show);
 
 module.exports = router;
