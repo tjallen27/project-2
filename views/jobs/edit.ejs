@@ -1,0 +1,22 @@
+<h1>Edit</h1>
+
+<form method="POST" action="/jobs/<%= job.id %>">
+  <input type="hidden" name="_method" value="PUT">
+
+  <div>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="<%= job.title %>">
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea name="description"><%= job.description %></textarea>
+  </div>
+
+  <div>
+    <label for="rate">Rate</label>
+    <input type="text" name="rate" id="rate" value="<%= job.rate %>">
+  </div>
+
+  <button>Update</button>
+</form>
