@@ -17,7 +17,7 @@ User
       streetNumber: '110',
       street: 'WhiteChapel High St',
       city: 'London',
-      postcode: 'E1 3ED',
+      postcode: 'EC3N 1AL',
       country: 'UK',
       lat: '51.520066',
       lng: '-0.055103'
@@ -32,7 +32,7 @@ User
       streetNumber: '80',
       street: 'WhiteChapel High St',
       city: 'London',
-      postcode: 'E1 1GD',
+      postcode: 'E1 5LJ',
       country: 'UK',
       lat: '51.4972758',
       lng: '-0.20491730000003372'
@@ -47,7 +47,7 @@ User
       streetNumber: '20',
       street: 'WhiteChapel High St',
       city: 'London',
-      postcode: 'E1 1XD',
+      postcode: 'E1 7HP',
       country: 'UK',
       lat: '51.51658620000001',
       lng: '-0.06498179999994136'
