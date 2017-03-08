@@ -1,4 +1,4 @@
-/* global google:ignore */
+/* global google:ignore mapStyles:ignore*/
 $(()=>{
 
   console.log('JS loaded!');
@@ -13,7 +13,8 @@ $(()=>{
     map = new google.maps.Map($map.get(0), {
       zoom: 13,
       center: center,
-      scrollwheel: false
+      scrollwheel: false,
+      styles: mapStyles
     });
     var infoWindow = new google.maps.InfoWindow({map: map});
 
@@ -59,9 +60,15 @@ $(()=>{
   }
 
   $('.go_back_btn').on('click', goBack);
-
   function goBack() {
     window.history.back();
   }
 
+  //Change nav styling on number of li's
+  const $lis = $('.nav-item');
+  const $nav = $('.navbar-nav');
+  if ($lis.length < 4) {
+    $lis.css('margin', '0 10px');
+    $nav.css('width', '50%');
+  }
 });

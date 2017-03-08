@@ -195,70 +195,238 @@ User
     phone: '01234 567 890',
     password: 'password',
     passwordConfirmation: 'password'
+  },
+  {
+    pubName: '93 Feet East',
+    address: {
+      streetNumber: '150',
+      street: 'Brick Lane',
+      city: 'London',
+      postcode: 'E1 6RU',
+      country: 'UK',
+      lat: '51.5217205',
+      lng: '-0.07151029999999992'
+    },
+    email: '13@13.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'A Bar 2 Far',
+    address: {
+      streetNumber: '40',
+      street: 'Mitcham Rd',
+      city: 'London',
+      postcode: 'SW17 9NA',
+      country: 'UK',
+      lat: '51.4268303',
+      lng: '-0.16678009999998267'
+    },
+    email: '14@14.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'Abacus ',
+    address: {
+      streetNumber: '24',
+      street: 'Cornhill',
+      city: 'London',
+      postcode: 'EC3V 3ND',
+      country: 'UK',
+      lat: '51.5132084',
+      lng: '-0.08711790000006658'
+    },
+    email: '15@15.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'The Abbeville',
+    address: {
+      streetNumber: '67-69',
+      street: 'Abbeville Rd,',
+      city: 'London',
+      postcode: 'SW4 9JW',
+      country: 'UK',
+      lat: '51.4548383',
+      lng: '-0.13970659999995405'
+    },
+    email: '16@16.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'The Abbey ',
+    address: {
+      streetNumber: '124',
+      street: 'Kentish Town Road',
+      city: 'London',
+      postcode: 'NW1 9QB',
+      country: 'UK',
+      lat: '51.5461774',
+      lng: '-0.14153609999993932'
+    },
+    email: '17@17.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'The Abbey',
+    address: {
+      streetNumber: ' ',
+      street: 'Abbey Orchard St',
+      city: 'London',
+      postcode: 'SW1P 2LU',
+      country: 'UK',
+      lat: '51.49823790000001',
+      lng: '-0.1313126000000011'
+    },
+    email: '18@18.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'The Abbey Arms ',
+    address: {
+      streetNumber: '31',
+      street: 'Wilton Road',
+      city: 'London',
+      postcode: 'SE2 9RH',
+      country: 'UK',
+      lat: '51.4903017',
+      lng: '0.1210995000000139'
+    },
+    email: '19@19.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
+    pubName: 'The Absolut Ice Bar',
+    address: {
+      streetNumber: '31 - 33',
+      street: 'Heddon Street',
+      city: 'London',
+      postcode: 'W1B 4BN',
+      country: 'UK',
+      lat: '51.5113075',
+      lng: '-0.1400155999999697'
+    },
+    email: '20@20.com',
+    phone: '01234 567 890',
+    password: 'password',
+    passwordConfirmation: 'password'
   }])
   .then((users) => {
     console.log(`${users.length} users created`);
     return Job
       .create([{
         title: 'Bartender',
-        description: 'Weekend Evening work',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips.',
         rate: 8,
         createdBy: users[0]
       },{
         title: 'Waitress',
-        description: 'Weekend Evening work',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips.',
         rate: 9,
         createdBy: users[1]
       },{
         title: 'Bar Work',
-        description: 'Bar staff needed for new pub',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 12,
         createdBy: users[2]
       },{
         title: 'Waitress',
-        description: 'Morning shifts at local cafe',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[3]
       },{
         title: 'Waitress',
-        description: 'Morning shifts at local cafe',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[4]
       },{
         title: 'Waitress',
-        description: 'Morning shifts at local cafe',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[5]
       },{
         title: 'Chef',
-        description: 'Chef needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[6]
       },{
         title: 'Waiter',
-        description: 'Waiter needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[7]
       },{
         title: 'Bar staff',
-        description: 'Bar Staff needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[8]
       },{
         title: 'Chef',
-        description: 'Chef needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[9]
       },{
         title: 'Chef',
-        description: 'Chef needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[10]
       },{
         title: 'Chef',
-        description: 'Chef needed at restaurant',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[11]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[12]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[13]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[14]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[15]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[16]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[17]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[18]
+      },{
+        title: 'Chef',
+        description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
+        rate: 9,
+        createdBy: users[19]
       }]);
   })
   .then((jobs) => console.log(`${jobs.length} jobs created`))

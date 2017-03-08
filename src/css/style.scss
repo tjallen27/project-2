@@ -13,7 +13,6 @@ main {
 }
 
 #map {
-  margin-top: 10px;
   z-index: 0;
   height: 90vh;
   width: 100%;
@@ -27,6 +26,7 @@ main {
     background: url('../assets/images/home_text4.jpeg');
     background-size: contain;
     font-size: 15em;
+    font-weight: bold;
     color: transparent;
     font-family: 'Special Elite', cursive;
     -webkit-font-smoothing:antialiased;
@@ -37,11 +37,14 @@ main {
   }
   h3 {
     font-size: 2em;
+    font-weight: lighter;
+    letter-spacing: 5px;
   }
 }
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .btn {
@@ -51,7 +54,7 @@ ul {
   cursor: pointer;
   font-family: 'Work Sans', sans-serif;
   color: #999;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 200;
   background: none;
   border: 2px solid  rgba(50, 50, 50, 0.2);
@@ -68,20 +71,39 @@ ul {
 
 .add_job_btn {
   float: none;
-  margin-left: -40px;
 }
 .go_back_btn {
+  padding: 5px;
+  margin-left: 15px;
   float: none;
-  margin-left: -40px;
+  font-size: 18px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid rgba(192, 192, 192, 0);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  &:hover {
+    border: none;
+    border-bottom: 2px solid rgba(150, 150, 150, 1);
+  }
 }
 
 .bg-faded {
   background-color: rgba(250, 250, 250, 0.3);
 }
 
+
+.navbar-brand {
+  font-family: 'Special Elite', cursive;
+  &:hover {
+    cursor: default;
+  }
+}
+
 .nav-link {
-  margin-right: 5px;
-  margin-left: 15px;
+  margin: 0 15px;
   font-size: 20px;
   letter-spacing: 5px;
   border-bottom: 2px solid rgba(192, 192, 192, 0);
@@ -101,18 +123,29 @@ ul {
   }
 }
 
-.navbar-toggleable-md .navbar-collapse {
-  width: 50%;
-  margin: 0 auto;
+
+.navbar .navbar-nav {
+    float: left;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
 .user_show_header {
+  color: rgba(10, 250, 150, 1);
   font-size: 48px;
   margin-bottom: 20px;
 }
 
 .user_show_contact {
   margin-bottom: 50px;
+}
+
+.user-address li p {
+  margin-bottom: 0;
 }
 
 .form-control {
@@ -159,12 +192,52 @@ ul {
   }
 }
 
-@media screen and (max-width: 990px) {
+.job a {
+  color: rgba(10, 250, 150, 1);
+}
+
+.job-desc {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1080px) {
+  .landing-header {
+    margin-top: 15vh;
+    h1 {
+      font-size: 9em;
+    }
+    h3 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .landing-header {
+    margin-top: 15vh;
+    h1 {
+      font-size: 4em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
   .navbar-toggleable-md .navbar-collapse {
     width: 100%;
   }
 
   .nav-link {
+    text-align: left;
     margin-right: 15px;
     margin-left: 15px;
   }

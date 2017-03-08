@@ -1,25 +1,34 @@
+<button class="btn go_back_btn">Go Back</button>
 <div class="container">
-  <button class="btn go_back_btn">Go Back</button>
+
   <h1 class="user_show_header"><%= user.pubName %></h1>
 
-  <ul>
-    <li><h5>Addess:</h5></li>
-    <li><h3><%- user.address.streetNumber %></h3></li>
-    <li><h3><%- user.address.street %></h3></li>
-    <li><h3><%- user.address.city %></h3></li>
-    <li><h3><%- user.address.postcode %></h3></li>
+<div class="row">
+  <div class="col-6 col-md-3">
+  <ul class="user-address">
+    <li><h5>Address:</h5></li>
+    <li><p><%- user.address.streetNumber %>,</p></li>
+    <li><p><%- user.address.street %>,</p></li>
+    <li><p><%- user.address.city %>,</p></li>
+    <li><p><%- user.address.postcode %></p></li>
     <li><br></li>
-    <li><h5>Addess:</h5></li>
-    <li><h5><%= user.phone %></h5></li>
-    <li><h5 class="user_show_contact"><%= user.email %></h5></li>
   </ul>
+  </div>
+  <div class="col-6 col-md-3">
+    <ul>
+      <li><h5>Contact:</h5></li>
+      <li><p>t: <%= user.phone %></p></li>
+      <li><p class="user_show_contact">e: <%= user.email %></p></li>
+    </ul>
+  </div>
+</div>
 
   <% if(!locals.isAuthenticated) { %>
-    <p>Looking for...</p>
+    <h5>Looking for...</h5>
   <% } %>
 
   <% if(locals.isAuthenticated) { %>
-    Your Jobs:
+    <h5>Your Jobs:</h5>
   <% } %>
 
   <div class="row ">
@@ -28,7 +37,7 @@
         <li>
 
           <a href="/jobs/<%= job.id %>"><h3><%= job.title %></h3></a>
-          <p><%= job.description %></p>
+          <p class="job-desc"><%= job.description %></p>
           <p>£<%= job.rate %>/ph</p>
 
           <% if(locals.isAuthenticated && job.ownedBy(user)) { %>

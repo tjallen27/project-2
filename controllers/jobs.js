@@ -68,8 +68,8 @@ function updateRoute(req, res) {
 
       return job.save();
     })
-    .then((job) => {
-      res.redirect(`/jobs/${job.id}`);
+    .then(() => {
+      res.redirect(`/users/${req.user.id}`);
     })
     .catch((err) => {
       res.status(500).end(err);

@@ -1,15 +1,16 @@
+<button class="btn go_back_btn">Go Back</button>
 <div class="container">
-  <button class="btn go_back_btn">Go Back</button>
   <ul>
     <li><h1>About this job...</h1></li>
     <li><br></li>
-    <li><h2><%= job.title %></h2></li>
-    <li><h4><%= job.description %></h4></li>
+    <li><h2>Job posted by: <br><em><%= job.createdBy.pubName %></em></h2></li>
+    <li><br></li>
+    <li><h3><%= job.title %></h3></li>
+    <li><p class="job-desc"><%= job.description %></p></li>
     <li><h4>£<%= job.rate %>/ph</h4></li>
     <li><br></li>
-    <li><h3>Contact:</h3></li>
-    <li><h4><em><%= job.createdBy.pubName %></em></h4></li>
-    <li><p><em><%= job.createdBy.phone %></em></p></li>
-    <li><p><em><%= job.createdBy.email %></em></p></li>
+    <li><p><strong>Contact:</strong></p></li>
+    <li><p>t: <em><%= job.createdBy.phone %></em></p></li>
+    <li><p>e: <em><%= job.createdBy.email %></em></p></li>
   </ul>
 </div>
