@@ -20,8 +20,7 @@ function secureRoute(req, res, next) {
 // A home route
 router.get('/', (req, res) => res.render('index'));
 
-// RESTful routes for the Job resource
-// All URLS should contain /jobs
+
 router.route('/jobs')
   .get(jobs.index)
   .post(secureRoute, jobs.create);

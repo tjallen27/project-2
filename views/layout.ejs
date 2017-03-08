@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>project2</title>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Work+Sans:200,400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9qthRAuEPrD_uUtl2S67hZoHS1WKaBEk"></script>
@@ -18,7 +19,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand" href="#">BarZurk</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -33,9 +34,6 @@
       <% if(locals.isAuthenticated) { %>
         <li class="nav-item">
           <a class="nav-link" href="/users/<%= user.id %>">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/jobs/new">Post new job</a>
         </li>
           <li class="nav-item">
             <a class="nav-link" href="/logout">Logout</a>
@@ -56,7 +54,7 @@
         <h5><%= messages[type] %></h5>
       </div>
     <% } %>
-    <main class="container">
+    <main>
       <%- body %>
     </main>
   </body>

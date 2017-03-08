@@ -1,23 +1,56 @@
-<h1>Show</h1>
-<div class="row ">
-  <% jobs.forEach((job) => { %>
-    <ul class="col-md-6 job">
-      <li>
+<div class="container">
+  <button class="btn go_back_btn">Go Back</button>
+  <h1 class="user_show_header"><%= user.pubName %></h1>
 
-        <a href="/jobs/<%= job.id %>"><h3><%= job.title %></h3></a>
-        <p><%= job.description %></p>
-        <p>£<%= job.rate %>/ph</p>
+  <ul>
+    <li><h5>Addess:</h5></li>
+    <li><h3><%- user.address.streetNumber %></h3></li>
+    <li><h3><%- user.address.street %></h3></li>
+    <li><h3><%- user.address.city %></h3></li>
+    <li><h3><%- user.address.postcode %></h3></li>
+    <li><br></li>
+    <li><h5>Addess:</h5></li>
+    <li><h5><%= user.phone %></h5></li>
+    <li><h5 class="user_show_contact"><%= user.email %></h5></li>
+  </ul>
 
-        <% if(locals.isAuthenticated && job.ownedBy(user)) { %>
-        <a href="/jobs/<%= job.id %>/edit" class="button">
-          <button type="button" class="btn btn-primary">Edit</button>
-        </a>
-        <form action="/jobs/<%= job.id %>" method="POST">
-          <input type="hidden" name="_method" value="DELETE"/>
-          <button type="button" class="btn btn-primary">Delete</button>
-          <% } %>
-        </form>
-      </li>
-    </ul>
-  <% }); %>
+  <% if(!locals.isAuthenticated) { %>
+    <p>Looking for...</p>
+  <% } %>
+
+  <% if(locals.isAuthenticated) { %>
+    Your Jobs:
+  <% } %>
+
+  <div class="row ">
+    <% jobs.forEach((job) => { %>
+      <ul class="col-md-6 job">
+        <li>
+
+          <a href="/jobs/<%= job.id %>"><h3><%= job.title %></h3></a>
+          <p><%= job.description %></p>
+          <p>£<%= job.rate %>/ph</p>
+
+          <% if(locals.isAuthenticated && job.ownedBy(user)) { %>
+          <a href="/jobs/<%= job.id %>/edit" class="button">
+            <button class="btn btn-primary">Edit</button>
+          </a>
+          <form action="/jobs/<%= job.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE"/>
+            <button class="btn btn-primary">Delete</button>
+            <% } %>
+          </form>
+        </li>
+        </ul>
+    <% }); %>
+  </div>
+    <% if(locals.isAuthenticated) { %>
+  <ul>
+    <li>
+      <a href="/jobs/new" class="button">
+        <button class="btn btn-primary add_job_btn">Add New Job</button>
+      </a>
+    </li>
+  </ul>
+  <% } %>
 </div>

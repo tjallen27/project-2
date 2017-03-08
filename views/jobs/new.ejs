@@ -1,22 +1,18 @@
-<h1>Post a new job</h1>
+<button class="btn go_back_btn">Go Back</button>
+  <div class="container">
+  <h1>Post a new job</h1>
 
-<form method="POST" action="/jobs">
-  <div class="form-group row">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" class="form-control col-md-4">
-  </div>
-
-  <div class="form-group row">
-    <label for="description">Description</label>
-    <textarea name="description" class="form-control col-md-4"></textarea>
-  </div>
-
-  <div class="form-group row">
-    <label for="rate">Rate (£/ph)</label>
-    <input type="number" name="rate" id="rate" class="form-control col-md-4">
-  </div>
-
-
-
-  <button type="button" class="btn btn-primary">Create</button>
-</form>
+  <form method="POST" action="/jobs">
+    <div class="form-group row">
+      <div class="col-lg-12">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" class="form-control col-md-4">
+        <label for="description">Description</label>
+        <textarea name="description" class="form-control col-md-4"></textarea>
+        <label for="rate">Rate (£/ph)</label>
+        <input type="number" name="rate" id="rate" class="form-control col-md-4">
+      </div>
+    </div>
+    <button class="btn btn-primary">Create</button>
+  </form>
+</div>

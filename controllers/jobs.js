@@ -35,7 +35,7 @@ function createRoute(req, res) {
   Job
     .create(req.body)
     .then(() => {
-      res.redirect('/jobs');
+      res.redirect(`/users/${req.user.id}`);
     })
     .catch((err) => {
       res.status(500).end(err);
@@ -86,7 +86,7 @@ function deleteRoute(req, res) {
       return job.remove();
     })
     .then(() => {
-      res.redirect('/jobs');
+      res.redirect(`/users/${req.user.id}`);
     })
     .catch((err) => {
       res.status(500).end(err);
