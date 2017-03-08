@@ -6,6 +6,20 @@ $(()=>{
   const $map = $('#map');
   let map = null;
   if ($map.length) initMap();
+  const $slider = $('#slider1');
+  const circle = new google.maps.Circle({
+    fillColor: '#3399FF',
+    fillOpacity: 0.3,
+    strokeColor: '#0099FF',
+    strokeOpacity: 0.5
+  });
+
+  $slider.on('change', (e) => {
+    if(circle.map) {
+      circle.setRadius(parseFloat($(e.target).val()));
+      map.fitBounds(circle.getBounds());
+    }
+  });
 
   function initMap() {
     console.log(users);
@@ -18,7 +32,8 @@ $(()=>{
     });
     var infoWindow = new google.maps.InfoWindow({map: map});
 
-    $('.find_me').on('click', () => {
+    // $('.find_me').one('click', () => {
+
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
           var pos = {
@@ -29,6 +44,13 @@ $(()=>{
           infoWindow.setPosition(pos);
           infoWindow.setContent('<div class="info">You\'re here!</div>');
           map.setCenter(pos);
+          circle.setMap(map);
+          circle.setCenter(pos);
+          //Store val of slider
+          circle.setRadius(parseFloat($slider.val()));
+          // Add the circle for this city to the map.
+          map.fitBounds(circle.getBounds());
+
         }, function() {
           handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -42,12 +64,11 @@ $(()=>{
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
       }
-    });
+    // });
 
 
     const users = $('#map').data('users');
     users.forEach((user) => {
-      console.log('user', user);
       const marker = new google.maps.Marker({
         position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
         map: map,
@@ -57,6 +78,8 @@ $(()=>{
         location.href =`users/${user._id}`;
       });
     });
+
+
   }
 
   $('.go_back_btn').on('click', goBack);
@@ -71,4 +94,15 @@ $(()=>{
     $lis.css('margin', '0 10px');
     $nav.css('width', '50%');
   }
+
+  var currentValue = $('#currentValue');
+
+  $('#slider1').change(function(){
+    currentValue.html(this.value / 1000 + 'km');
+  });
+
+	// Trigger the event on load, so
+	// the value field is populated:
+
+  $('#slider1').change();
 });

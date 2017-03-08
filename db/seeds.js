@@ -328,37 +328,37 @@ User
     console.log(`${users.length} users created`);
     return Job
       .create([{
-        title: 'Bartender',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips.',
         rate: 8,
         createdBy: users[0]
       },{
-        title: 'Waitress',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips.',
         rate: 9,
         createdBy: users[1]
       },{
-        title: 'Bar Work',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 12,
         createdBy: users[2]
       },{
-        title: 'Waitress',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[3]
       },{
-        title: 'Waitress',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[4]
       },{
-        title: 'Waitress',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[5]
       },{
-        title: 'Chef',
+        title: 'Bar staff',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[6]
@@ -368,32 +368,32 @@ User
         rate: 9,
         createdBy: users[7]
       },{
-        title: 'Bar staff',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[8]
       },{
-        title: 'Chef',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[9]
       },{
-        title: 'Chef',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[10]
       },{
-        title: 'Chef',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[11]
       },{
-        title: 'Chef',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[12]
       },{
-        title: 'Chef',
+        title: 'Waiter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[13]
@@ -408,22 +408,22 @@ User
         rate: 9,
         createdBy: users[15]
       },{
-        title: 'Chef',
+        title: 'Kitchen porter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[16]
       },{
-        title: 'Chef',
+        title: 'Kitchen porter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[17]
       },{
-        title: 'Chef',
+        title: 'Kitchen porter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[18]
       },{
-        title: 'Chef',
+        title: 'Kitchen porter',
         description: 'We are looking for an enthusiastic bartender to provide an excellent guest drinking experience. Good bartenders will be able to create classic and innovative drinks exceeding customers’ needs and expectations. Compensation includes salary and tips. ',
         rate: 9,
         createdBy: users[19]
