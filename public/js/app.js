@@ -12,9 +12,9 @@ $(function () {
   var infowindow = null;
   var circle = new google.maps.Circle({
     fillColor: '#3399FF',
-    fillOpacity: 0.3,
+    fillOpacity: 0.2,
     strokeColor: '#0099FF',
-    strokeOpacity: 0.5
+    strokeOpacity: 0.4
   });
 
   $slider.on('change', function (e) {
@@ -57,7 +57,7 @@ $(function () {
         var marker = new google.maps.Marker({
           position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
           map: map,
-          icon: '../assets/images/marker.png' // Adding a custom icon
+          icon: '../assets/images/marker2.png' // Adding a custom icon
         });
         google.maps.event.addListener(marker, 'click', function () {
           location.href = 'users/' + user._id;

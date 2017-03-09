@@ -171,6 +171,13 @@ main {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #888;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  &:focus {
+    border-bottom: 1px solid rgba(10, 250, 150, 0.6);
+  }
 }
 
 .info {
@@ -201,11 +208,12 @@ main {
 
 .slider {
   padding-top: 5px;
-  background: rgba(250, 250, 250, 0.9);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.09) 94%, rgba(231,56,39,0) 100%);
   position: absolute;
   z-index: 10;
   right: 0;
   width: 100%;
+  height: 20%;
   text-align: center;
   .note {
     margin-top: 5px;
