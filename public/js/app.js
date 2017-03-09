@@ -32,9 +32,6 @@ $(function () {
       scrollwheel: false,
       styles: mapStyles
     });
-    var infoWindow = new google.maps.InfoWindow({ map: map });
-
-    // $('.find_me').one('click', () => {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -43,8 +40,6 @@ $(function () {
           lng: position.coords.longitude
         };
 
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('<div class="info">You\'re here!</div>');
         map.setCenter(pos);
         circle.setMap(map);
         circle.setCenter(pos);
@@ -52,19 +47,8 @@ $(function () {
         circle.setRadius(parseFloat($slider.val()));
         // Add the circle for this city to the map.
         map.fitBounds(circle.getBounds());
-      }, function () {
-        handleLocationError(true, infoWindow, map.getCenter());
       });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
     }
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
-    }
-    // });
-
 
     var users = $('#map').data('users');
     users.forEach(function (user) {
@@ -97,9 +81,6 @@ $(function () {
   $('#slider1').change(function () {
     currentValue.html(this.value / 1000 + 'km');
   });
-
-  // Trigger the event on load, so
-  // the value field is populated:
 
   $('#slider1').change();
 });

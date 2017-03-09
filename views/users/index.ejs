@@ -1,5 +1,12 @@
 <div class="slider">
+  <form action="">
+    <input type="checkbox" name="job_title_bar" value="Bar Staff"> Bar Staffs<br>
+    <input type="checkbox" name="job_title_chef" value="Chefs"> Chefs<br>
+    <input type="checkbox" name="job_title_waiter" value="Waiters"> Waiters<br>
+    <input type="checkbox" name="job_title_porter" value="Kitchen Porters"> Kitchen porters
+  </form>
+  <p class="note">Distance from me: </p>
   <input id="slider1" type="range" min="1000" max="5000" step="100" />
-  <p class="note">Distance from me: <span id="currentValue">0</span></p>
+  <p><span id="currentValue">0</span></p>
 </div>
 <div id="map" data-users="<%= JSON.stringify(users) %>">
