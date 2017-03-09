@@ -9,6 +9,7 @@ $(function () {
   var map = null;
   if ($map.length) initMap();
   var $slider = $('#slider1');
+  var infowindow = null;
   var circle = new google.maps.Circle({
     fillColor: '#3399FF',
     fillOpacity: 0.3,
@@ -51,16 +52,39 @@ $(function () {
     }
 
     var users = $('#map').data('users');
-    users.forEach(function (user) {
-      var marker = new google.maps.Marker({
-        position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
-        map: map,
-        icon: '../assets/images/marker.png' // Adding a custom icon
+    function addMarkers() {
+      users.forEach(function (user) {
+        var marker = new google.maps.Marker({
+          position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
+          map: map,
+          icon: '../assets/images/marker.png' // Adding a custom icon
+        });
+        google.maps.event.addListener(marker, 'click', function () {
+          location.href = 'users/' + user._id;
+        });
+        marker.addListener('mouseover', function () {
+          markerClick(marker, user);
+        });
       });
-      google.maps.event.addListener(marker, 'click', function () {
-        location.href = 'users/' + user._id;
-      });
+    }
+    addMarkers();
+  }
+
+  function markerClick(marker, user) {
+
+    // If there is an open infowindow on the map, close it
+    if (infowindow) infowindow.close();
+
+    // Locate the data that we need from the individual bike object
+    var pubName = user.pubName;
+    console.log(pubName);
+    // Update the infowindow variable to be a new Google InfoWindow
+    infowindow = new google.maps.InfoWindow({
+      content: '\n      <div class="infowindow">\n        <p>' + pubName + '</p>\n      </div>\n      '
     });
+
+    // Finally, open the new InfoWindow
+    infowindow.open(map, marker);
   }
 
   $('.go_back_btn').on('click', goBack);

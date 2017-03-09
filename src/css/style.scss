@@ -237,23 +237,23 @@ input[type=range]:focus {
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 200px;
-  height: 8.4px;
+  height: 2px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: rgba(10, 250, 150, 0.6);
-  border-radius: 1.3px;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  border: 1px solid #fff;
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  background: #ffffff;
+  background: rgba(10, 250, 150, 1);
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -8px;
+  margin-top: -10px;
+  &:active {
+    background: rgba(80, 250, 200, 1);
+  }
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: rgba(10, 250, 150, 0.6);
@@ -280,6 +280,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .job-desc {
   text-align: justify;
+}
+
+.infowindow p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px !important;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1080px) {
@@ -322,5 +328,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     text-align: left;
     margin-right: 15px;
     margin-left: 15px;
+  }
+
+  .slider {
+    display: none;
   }
 }

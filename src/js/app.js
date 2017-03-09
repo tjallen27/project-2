@@ -7,6 +7,7 @@ $(()=>{
   let map = null;
   if ($map.length) initMap();
   const $slider = $('#slider1');
+  let infowindow = null;
   const circle = new google.maps.Circle({
     fillColor: '#3399FF',
     fillOpacity: 0.3,
@@ -49,16 +50,43 @@ $(()=>{
     }
 
     const users = $('#map').data('users');
-    users.forEach((user) => {
-      const marker = new google.maps.Marker({
-        position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
-        map: map,
-        icon: '../assets/images/marker.png' // Adding a custom icon
+    function addMarkers(){
+      users.forEach((user) => {
+        const marker = new google.maps.Marker({
+          position: { lat: parseFloat(user.address.lat), lng: parseFloat(user.address.lng) },
+          map: map,
+          icon: '../assets/images/marker.png' // Adding a custom icon
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          location.href =`users/${user._id}`;
+        });
+        marker.addListener('mouseover', () => {
+          markerClick(marker, user);
+        });
       });
-      google.maps.event.addListener(marker, 'click', function() {
-        location.href =`users/${user._id}`;
-      });
+    }
+    addMarkers();
+  }
+
+  function markerClick(marker, user) {
+
+    // If there is an open infowindow on the map, close it
+    if(infowindow) infowindow.close();
+
+    // Locate the data that we need from the individual bike object
+    const pubName = user.pubName;
+    console.log(pubName);
+    // Update the infowindow variable to be a new Google InfoWindow
+    infowindow = new google.maps.InfoWindow({
+      content: `
+      <div class="infowindow">
+        <p>${pubName}</p>
+      </div>
+      `
     });
+
+    // Finally, open the new InfoWindow
+    infowindow.open(map, marker);
   }
 
   $('.go_back_btn').on('click', goBack);
@@ -79,6 +107,6 @@ $(()=>{
   $('#slider1').change(function(){
     currentValue.html(this.value / 1000 + 'km');
   });
-  
+
   $('#slider1').change();
 });
