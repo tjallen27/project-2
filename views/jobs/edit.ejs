@@ -7,7 +7,12 @@
     <div class="form-group row">
       <div class="col-lg-12">
         <label for="title">Title</label>
-        <input class="form-control col-md-4" type="text" name="title" id="title" value="<%= job.title %>">
+          <select class="title_dropdown" name="title" id="title" value="<%= job.title %>">
+            <option value="Bar staff">Bar staff</option>
+            <option value="Chef">Chef</option>
+            <option value="Waiter">Waiter</option>
+            <option value="Kitchen porter">Kitchen porter</option>
+          </select><br>
         <label for="description">Description</label>
         <textarea class="form-control col-md-4" name="description"><%= job.description %></textarea>
         <label for="rate">Rate</label>
