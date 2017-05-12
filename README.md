@@ -1,5 +1,8 @@
 # BARZURK
 
+
+[Check out BARZURK](https://desolate-hamlet-32222.herokuapp.com/)
+
 A Restful Web App for people who are looking jobs at a local pub.
 
 People can either view the map and see which pubs have jobs available, or they can register, login and upload, edit and delete job posts from their profile page.
